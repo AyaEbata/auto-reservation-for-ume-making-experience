@@ -12,6 +12,10 @@
 - 鎌倉店での予約
 - リクルートIDを使っての予約
 
+## 実行方法
+1. `config_sample.properties`をコピーして`config.properties`を作成し、内容を記入する。
+2. AutoReservationSpecクラスのmainメソッドを実行。
+
 ## 開発メモ
 - Java 14を使う場合はGradle 6.3以降を使う
   - `gradle/wrapper/gradle-wrapper.properties`にてGradleのバージョン変更が出来る
