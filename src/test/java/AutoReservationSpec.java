@@ -13,8 +13,8 @@ public class AutoReservationSpec {
     public void main() {
         Properties config = getConfigProperties();
 
-//        open("https://airrsv.net/choya-umetaiken-kamakura/calendar");  // こっち鎌倉店
-        open("https://airrsv.net/choya-umetaiken-kyoto/calendar");  // 鎌倉店は人気なので京都店で確認する
+        open("https://airrsv.net/choya-umetaiken-kamakura/calendar");  // 鎌倉店
+//        open("https://airrsv.net/choya-umetaiken-kyoto/calendar");  // 確認する際は、こっちの京都店を使う（鎌倉店は人気なので）
 
         // 日時選択のページ
         int dateIndex = getDateIndexOfApplicablePage(config.getProperty("preferred.date"));
