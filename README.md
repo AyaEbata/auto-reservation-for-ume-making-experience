@@ -17,6 +17,8 @@
 2. `config_sample.properties`をコピーして`config.properties`を作成し、内容を記入する。
 3. AutoReservationSpecクラスのmainメソッドを実行。
 
+※ 上記の3番実行後は、入力内容をちゃんと目視で確認して、自分で「上記に同意して予約を確定する」ボタンを押す。
+
 ## 開発メモ
 - Java 14を使う場合はGradle 6.3以降を使う
   - `gradle/wrapper/gradle-wrapper.properties`にてGradleのバージョン変更が出来る
