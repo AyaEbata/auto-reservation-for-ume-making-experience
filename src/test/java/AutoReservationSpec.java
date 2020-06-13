@@ -16,14 +16,28 @@ public class AutoReservationSpec {
 //        open("https://airrsv.net/choya-umetaiken-kamakura/calendar");  // こっち鎌倉店
         open("https://airrsv.net/choya-umetaiken-kyoto/calendar");  // 鎌倉店は人気なので京都店で確認する
 
+        // 日時選択のページ
         int dateIndex = getDateIndexOfApplicablePage(config.getProperty("preferred.date"));
-
         if (!exist(dateIndex)) {
             System.out.println("指定した日付が見つかりません！");
             return;
         }
-
         clickPreferredTime(dateIndex, config.getProperty("preferred.time"));
+
+        // 人数指定のページ
+        $("#lessonEntryPaxCnt").val(config.getProperty("numberOfPeople"));
+        $("#ridLogin").click();
+
+        // リクルートIDでログインするページ
+        $("#mainEmail").val(config.getProperty("recruit.id"));
+        $("#passwordText").val(config.getProperty("recruit.password"));
+        $("#keepLogin").setSelected(false);
+        $("#sbmbtn").click();
+
+        // 個人情報入力するページ
+        $("button[type=submit]").click();
+
+        // 最後は入力内容をちゃんと目視で確認してから自分で「上記に同意して予約を確定する」ボタンを押してね！！
 
         sleep(1000*60*5);
     }
