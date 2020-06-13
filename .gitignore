@@ -18,4 +18,4 @@ gradle-app.setting
 
 # Other
 .idea
-src/test/resources/config.yml
+src/test/resources/config.properties
